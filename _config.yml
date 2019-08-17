@@ -7,13 +7,13 @@ title: Warrior的博客
 subtitle: 后端程序员一枚
 description: 想做一个热爱生活的人
 keywords: Java,MySQL
-author: 王瑞
-language: zh-cn
+author: Warrior
+language: zh-Hans
 timezone:
 
 # URL
 ## If your site is put in a subdirectory, set url as 'http://yoursite.com/child' and root as '/child/'
-url: http://yoursite.com
+url: https://warrior2005.github.io/
 root: /
 permalink: :year/:month/:day/:title/
 permalink_defaults:
