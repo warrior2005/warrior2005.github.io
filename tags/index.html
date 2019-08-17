@@ -312,6 +312,9 @@
 
           </div>
           
+    
+    <div class="comments" id="gitalk-container"></div>
+  
 
         </div>
           
@@ -526,6 +529,25 @@ show_date_time();
     <script src="/js/scrollspy.js?v=7.3.0"></script><script src="/js/post-details.js?v=7.3.0"></script>
 
   
+
+<link rel="stylesheet" href="//cdn.jsdelivr.net/npm/gitalk@1/dist/gitalk.min.css">
+
+<script>
+  NexT.utils.getScript('//cdn.jsdelivr.net/npm/gitalk@1/dist/gitalk.min.js', () => {
+    var gitalk = new Gitalk({
+      clientID: 'Iv1.69dba1f58502439f',
+      clientSecret: '35af184ed071208921638ef23cac1e96722bbee6',
+      repo: 'blog-comments',
+      owner: 'warrior2005',
+      admin: ['warrior2005'],
+      id: 'f47af1d1eda4d807b02bba32be15120b',
+        language: window.navigator.language || window.navigator.userLanguage,
+      
+      distractionFreeMode: 'true'
+    });
+    gitalk.render('gitalk-container');
+  }, window.Gitalk);
+</script>
 
 </body>
 </html>
