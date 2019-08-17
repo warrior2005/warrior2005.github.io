@@ -1029,27 +1029,35 @@ pre .javascript .function {
   padding-top: 0;
 }
 .back-to-top {
-  background: #f5f7f9;
+  background: #222;
+  bottom: -100px;
+  box-sizing: border-box;
+  color: #fff;
   cursor: pointer;
   font-size: 12px;
-  margin: 8px -10px -20px;
   opacity: 0.6;
+  padding: 0 6px;
+  position: fixed;
+  right: 30px;
   text-align: center;
-  visibility: hidden;
-}
-.back-to-top:hover {
-  opacity: 0.8;
-}
-@media (max-width: 991px) {
-  .back-to-top {
-    display: none;
-  }
-}
-.back-to-top.back-to-top-on {
-  visibility: visible;
+  transition-property: bottom;
+  width: initial;
+  z-index: 1050;
   transition-delay: 0s;
   transition-duration: 0.2s;
   transition-timing-function: ease-in-out;
+}
+.back-to-top:hover {
+  color: #fc6423;
+}
+.back-to-top.back-to-top-on {
+  bottom: 30px;
+}
+@media (max-width: 991px) {
+  .back-to-top {
+    opacity: 0.8;
+    right: 20px;
+  }
 }
 .header {
   background: transparent;
@@ -1616,6 +1624,41 @@ pre .javascript .function {
 #qr p {
   text-align: center;
 }
+#qr > div:hover p {
+  animation: roll 0.1s infinite linear;
+}
+@-moz-keyframes roll {
+  from {
+    transform: rotateZ(30deg);
+  }
+  to {
+    transform: rotateZ(-30deg);
+  }
+}
+@-webkit-keyframes roll {
+  from {
+    transform: rotateZ(30deg);
+  }
+  to {
+    transform: rotateZ(-30deg);
+  }
+}
+@-o-keyframes roll {
+  from {
+    transform: rotateZ(30deg);
+  }
+  to {
+    transform: rotateZ(-30deg);
+  }
+}
+@keyframes roll {
+  from {
+    transform: rotateZ(30deg);
+  }
+  to {
+    transform: rotateZ(-30deg);
+  }
+}
 .sidebar {
   background: #222;
   bottom: 0;
@@ -1702,7 +1745,7 @@ pre .javascript .function {
 }
 .links-of-author a::before,
 .links-of-author span.exturl::before {
-  background: #baff90;
+  background: #ffb559;
   border-radius: 50%;
   content: ' ';
   display: inline-block;
