@@ -78,4 +78,10 @@ theme: next
 # Deployment
 ## Docs: https://hexo.io/docs/deployment.html
 deploy:
-  type:
+  - type: git
+    repo: https://github.com/warrior2005/warrior2005.github.io.git
+    branch: master
+    ignore_hidden: false
+
+include:
+  - .nojekyll
